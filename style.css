@@ -1,15 +1,16 @@
 .container{
-margin-top: 90px;
-width: 60%; 
-  height: 50vh; 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+#quote-box{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; 
-  background-color: lightgray; 
-}
-#quote-box{
-    padding: 0;
+  height: 100vh;
 }
 #author{
     display: flex;

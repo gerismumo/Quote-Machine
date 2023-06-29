@@ -1,5 +1,6 @@
-const quotes =[
-    {
+document.addEventListener('DOMContentLoaded', function() {
+    const quotes = [
+      {
         id: 1,
         text: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
         author: "Gerald"
@@ -14,33 +15,32 @@ const quotes =[
         text: "Nullam ac nisi sit amet libero consequat commodo sed id lacus.",
         author: "Michael"
       },
-]
-let currentQuoteIndex = Math.floor(Math.random() * quotes.length);
-
-function displayQuote() {
-  const currentQuote = quotes[currentQuoteIndex];
-  $('#text').text(currentQuote.text);
-  $('#author').text(currentQuote.author);
-}
-
-function toggleQuote() {
-  currentQuoteIndex = Math.floor(Math.random() * quotes.length);
-  displayQuote();
-}
-
-$(document).ready(function() {
-  displayQuote();
-  $('#new-quote').click(toggleQuote);
-});
-
-
-
-
-
-
-
-
-
-
-
+    ];
+  
+    const textElement = document.getElementById('text');
+    const authorElement = document.getElementById('author');
+    const newQuoteButton = document.getElementById('new-quote');
+  
+    let currentQuoteIndex = 0;
+  
+    function displayQuote() {
+      const currentQuote = quotes[currentQuoteIndex];
+      textElement.textContent = currentQuote.text;
+      authorElement.textContent = currentQuote.author;
+    }
+  
+    function generateRandomQuoteIndex() {
+      return Math.floor(Math.random() * quotes.length);
+    }
+  
+    function changeQuote() {
+      currentQuoteIndex = generateRandomQuoteIndex();
+      displayQuote();
+    }
+  
+    newQuoteButton.addEventListener('click', changeQuote);
+  
+    displayQuote();
+  });
+  
 
