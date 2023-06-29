@@ -1,0 +1,43 @@
+.container{
+margin-top: 90px;
+width: 60%; 
+  height: 50vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; 
+  background-color: lightgray; 
+}
+#quote-box{
+    padding: 0;
+}
+#author{
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+}
+.bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left {
+    order: 1; 
+  }
+  
+  .right {
+    order: 2; 
+  }
+  button{
+    border: 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: skyblue;
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
